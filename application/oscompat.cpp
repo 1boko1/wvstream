@@ -25,5 +25,5 @@ const char *widevinedll = "widevinecdm.dll";
 #else
 bool WSASU(){return true;}
 void WSACU(){};
-const char *widevinedll = "/home/build/Dokumente/liberty-dev/wvstream/application/libwidevinecdm.so";
+const char *widevinedll = "./libwidevinecdm.so";
 #endif
