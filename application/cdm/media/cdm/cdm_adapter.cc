@@ -224,9 +224,9 @@ cdm::Status CdmAdapter::Decrypt(const cdm::InputBuffer& encrypted_buffer,
   active_buffer_ = decrypted_buffer->DecryptedBuffer();
 	cdm::Status ret = cdm_->Decrypt(encrypted_buffer, decrypted_buffer);
 	active_buffer_ = 0;
-	if (ret == 0)
-		std::cout << "CdmAdapter::Decrypt successfull" << std::endl;
-	else if (ret == 1)
+	//if (ret == 0)
+	//	std::cout << "CdmAdapter::Decrypt successfull" << std::endl;
+	if (ret == 1)
 		std::cout << "CdmAdapter::Decrypt failed - Decoder needs more data to produce a decoded frame/sample." << std::endl;
 	else if (ret == 2)
 		std::cout << "CdmAdapter::Decrypt failed due to missing key " << std::endl;
